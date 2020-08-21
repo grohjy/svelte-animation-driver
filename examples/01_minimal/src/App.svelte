@@ -1,6 +1,6 @@
 <script>
   import PlayControls from './PlayControls.svelte'
-  import { animationDriver } from '../../../animation-driver'
+  import { animationDriver } from 'svelte-animation-driver'
   const drv = animationDriver()
   let x
   new drv.addAnimation(0, 3000, (t) => (x = t))

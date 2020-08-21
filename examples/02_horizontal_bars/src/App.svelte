@@ -1,6 +1,6 @@
 <script>
   import PlayControls from './PlayControls.svelte'
-  import { animationDriver } from '../../../animation-driver'
+  import { animationDriver } from 'svelte-animation-driver'
   import { sineOut, elasticOut, bounceOut } from "svelte/easing";
 
   const drv = animationDriver(0, 0)

@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "file": "bundle.css",
+  "sources": [
+    "..\\..\\PlayControls.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\r\n  export let drv\r\n  let props = drv.propsStore\r\n  let ph = drv.playheadStore\r\n  $ph = 0\r\n</script>\r\n\r\n<style>\r\n  button {\r\n    margin: 2px;\r\n    padding: 3px;\r\n    min-width: 50px;\r\n  }\r\n  .sel {\r\n    font-weight: bold;\r\n  }\r\n</style>\r\n\r\n<hr />\r\n<div>\r\n  <div style=\"display:inline-block;width:60px;\">Controls:</div>\r\n  {#if $props.playing && $props.direction == 'rew'}\r\n    <button class=\"sel\" on:click={() => drv.pause()}>||</button>\r\n  {:else}\r\n    <button on:click={() => drv.rewind()}>&lt</button>\r\n  {/if}\r\n  <button on:click={() => drv.reset()}>Reset</button>\r\n  {#if $props.playing && $props.direction == 'fwd'}\r\n    <button class=\"sel\" on:click={() => drv.pause()}>||</button>\r\n  {:else}\r\n    <button on:click={() => drv.play()}>&gt</button>\r\n  {/if}\r\n</div>\r\n<div>\r\n  <div style=\"display:inline-block;width:60px;\">Speed:</div>\r\n  <button class:sel={$props.speed == 0.5} on:click={() => ($props.speed = 0.5)}>\r\n    x0.5\r\n  </button>\r\n  <button class:sel={$props.speed == 1} on:click={() => ($props.speed = 1)}>\r\n    x1\r\n  </button>\r\n  <button class:sel={$props.speed == 2} on:click={() => ($props.speed = 2)}>\r\n    x2\r\n  </button>\r\n</div>\r\n<p>\r\n  <span>Playhead:{Math.floor($ph * 100) / 100}</span>\r\n  <br />\r\n  <input\r\n    on:input={(e) => {\r\n      $ph = e.target.value / 500\r\n    }}\r\n    type=\"range\"\r\n    min=\"0\"\r\n    max=\"500\"\r\n    value={$ph * 500} />\r\n</p>\r\n"
+  ],
+  "names": [],
+  "mappings": "AAQE,MAAM,cAAC,CAAC,AACN,MAAM,CAAE,GAAG,CACX,OAAO,CAAE,GAAG,CACZ,SAAS,CAAE,IAAI,AACjB,CAAC,AACD,IAAI,cAAC,CAAC,AACJ,WAAW,CAAE,IAAI,AACnB,CAAC"
+}
