@@ -1,12 +1,14 @@
 {
   "name": "svelte-animation-driver",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "dependencies": {
     "svelte-animation-driver": "^0.0.1"
   },
   "description": "Animation driver for svelte apps",
   "main": "dist/animation-driver.js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "directories": {
     "example": "examples"
   },
