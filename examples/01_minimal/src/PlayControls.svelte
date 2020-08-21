@@ -1,7 +1,7 @@
 <script>
-  export let anim
-  let props = anim.propsStore
-  let ph = anim.playheadStore
+  export let drv
+  let props = drv.propsStore
+  let ph = drv.playheadStore
   $ph = 0
 </script>
 
@@ -20,15 +20,15 @@
 <div>
   <div style="display:inline-block;width:60px;">Controls:</div>
   {#if $props.playing && $props.direction == 'rew'}
-    <button class="sel" on:click={() => anim.pause()}>||</button>
+    <button class="sel" on:click={() => drv.pause()}>||</button>
   {:else}
-    <button on:click={() => anim.rewind()}>&lt</button>
+    <button on:click={() => drv.rewind()}>&lt</button>
   {/if}
-  <button on:click={() => anim.reset()}>Reset</button>
+  <button on:click={() => drv.reset()}>Reset</button>
   {#if $props.playing && $props.direction == 'fwd'}
-    <button class="sel" on:click={() => anim.pause()}>||</button>
+    <button class="sel" on:click={() => drv.pause()}>||</button>
   {:else}
-    <button on:click={() => anim.play()}>&gt</button>
+    <button on:click={() => drv.play()}>&gt</button>
   {/if}
 </div>
 <div>
