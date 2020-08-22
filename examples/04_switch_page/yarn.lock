@@ -469,9 +469,9 @@ rollup-pluginutils@^2.8.2:
     estree-walker "^0.6.1"
 
 rollup@^2.3.4:
-  version "2.26.4"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.26.4.tgz#a8350fd6bd56fce9873a7db2bd9547d40de3992b"
-  integrity sha512-6+qsGuP0MXGd7vlYmk72utm1MrgZj5GfXibGL+cRkKQ9+ZL/BnFThDl0D5bcl7AqlzMjAQXRAwZX1HVm22M/4Q==
+  version "2.26.5"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.26.5.tgz#5562ec36fcba3eed65cfd630bd78e037ad0e0307"
+  integrity sha512-rCyFG3ZtQdnn9YwfuAVH0l/Om34BdO5lwCA0W6Hq+bNB21dVEBbCRxhaHOmu1G7OBFDWytbzAC104u7rxHwGjA==
   optionalDependencies:
     fsevents "~2.1.2"
 
@@ -546,6 +546,13 @@ supports-color@^6.1.0:
   integrity sha512-qe1jfm1Mg7Nq/NSh6XE24gPXROEVsWHxC1LIx//XNlD9iw7YZQGjZNjYN7xGaEG6iKdA8EtNFW6R0gjnVXp+wQ==
   dependencies:
     has-flag "^3.0.0"
+
+svelte-animation-driver@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/svelte-animation-driver/-/svelte-animation-driver-0.0.1.tgz#09662463f1efdb5ce085f0a7247663b4b56294c3"
+  integrity sha512-/4WW3OuKokoCXWVcttSwsMZ8Wl83HyOanEY86VZjEoC8dihDBawwdgQCJPECKgxRLVwljNmjD/yvpRVREvXZww==
+  dependencies:
+    svelte-animation-driver "^0.0.1"
 
 svelte@^3.0.0:
   version "3.24.1"
